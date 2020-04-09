@@ -1,45 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-
-    <title>Mi primer CRUD con Firebase</title>
-
-    <!-- Firestore -->
-    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Agregar usuarios!</h1>
-      <input type="text" id="nombre" placeholder="nombre" class="form-control my-3">
-      <input type="text" id="apellido" placeholder="apellido" class="form-control my-3">
-      <input type="text" id="fecha" placeholder="fecha" class="form-control my-3">
-      <button class="btn btn-info" id="boton" onclick="guardar()">Guardar</button>
-
-      <table class="table my-3">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Born</th>
-              <th scope="col">Eliminar</th>
-              <th scope="col">Editar</th>
-            </tr>
-          </thead>
-          <tbody id="tabla">
-          </tbody>
-        </table>
-    </div>
-    
-
-    <!-- Optional JavaScript -->
     <!-- Dynatrace -->
     <script type="text/javascript">
 (function(){(function(){function c(){if(void 0===b.dialogArguments)return navigator.cookieEnabled;document.cookie="__dTCookie=1";var a=-1!==document.cookie.indexOf("__dTCookie");document.cookie="__dTCookie=1; expires=Thu, 01-Jan-1970 00:00:01 GMT";return a}if(window.dT_)window.console&&window.console.log("Duplicate agent injection detected, turning off redundant initConfig.");else{var b="undefined"!==typeof window?window:self;(function(){var a;if(c()&&!window.dT_){var b=(a={},a.cfg="app=cadd3f23a9e641dc|cors=1|featureHash=A2SVfqru|reportUrl=https://bf69022iew.bf.dynatrace.com/bf|rdnt=1|uxrgce=1|bp=2|cuc=hn5d0al1|srms=1,1,,,|uxrgcm=100,25,300,3;100,25,300,3|dpvc=1|lastModification=1586461943188|dtVersion=10189200406084516|tp=500,50,0,1|uxdcw=1500|featureHash=A2SVfqru|agentUri=https://js-cdn.dynatrace.com/jstag/17052aca8bb/ruxitagent_A2SVfqru_10189200406084516.js|auto=|domain=|rid=RID_|rpid=|app=cadd3f23a9e641dc",
@@ -87,6 +48,45 @@ U;if(!(U=n("async")||"complete"===document.readyState)){var V=e.navigator.userAg
 !0,void 0,void 0,"dtjsagent"));M(C)&&(g.cooO=!0);Jc();if(0===h){var va=!!Ua(cb);g.pVO=va;Ia(ab)}Wa=18E5;Za=216E5;0===h&&E("hvt")&&(Za=E("hvt"));Da(Gb,[1])}catch(Ja){return!1}return!0}(0)){try{delete e.dT_}catch(a){e.dT_=void 0}pb()&&e.console.log("JsAgent initCode initialization failed!")}}})();}).call(this);
 
 </script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <title>Mi primer CRUD con Firebase</title>
+
+    <!-- Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Agregar usuarios!</h1>
+      <input type="text" id="nombre" placeholder="nombre" class="form-control my-3">
+      <input type="text" id="apellido" placeholder="apellido" class="form-control my-3">
+      <input type="text" id="fecha" placeholder="fecha" class="form-control my-3">
+      <button class="btn btn-info" id="boton" onclick="guardar()">Guardar</button>
+
+      <table class="table my-3">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Born</th>
+              <th scope="col">Eliminar</th>
+              <th scope="col">Editar</th>
+            </tr>
+          </thead>
+          <tbody id="tabla">
+          </tbody>
+        </table>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
